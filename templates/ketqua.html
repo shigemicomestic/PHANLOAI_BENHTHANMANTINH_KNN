@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoAn_HocMay</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+        }
+        
+        header {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    
+        header p {
+            margin: 0;
+            margin-left: 110px;
+            text-align: center;
+            color: blue;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        main {
+            flex: 8;
+            display: flex;
+        }
+        
+        table, tr, td{
+            padding: 5px;
+        }
+
+        .button {
+            width: 150px;
+            height: 50px;
+        }
+        footer {
+            background-color: #f1f1f1;
+            color: blue;
+            text-align: center;
+            flex: 1;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <div>
+                    <br><p>ĐỒ ÁN HỌC MÁY</p><br>
+                    <p>CHUẨN ĐOÁN BỆNH THẬN MÃN TÍNH</p><br>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container" style="margin: 0 auto;">
+                <h2 style="text-align: center;">Kết Quả</h2>
+                <form method="POST" action="/save_result">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="TenBN">Tên Bệnh Nhân:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="TenBN" name="TenBN" value="{{ tenBN }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="GioiTinh">Giới Tính:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="GioiTinh" name="GioiTinh" value="{{ gioiTinh }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="NgayKham">Ngay Kham:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="NgayKham" name="NgayKham">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="ChuanDoan">Chuẩn Đoán:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="ChuanDoan" name="ChuanDoan" value="{{ chuandoan }}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="GhiChu">Ghi Chú:</label>
+                            </td>
+                            <td>
+                                <textarea type="text" id="ChuanDoan" name="ChuanDoan" style="width: 500px; height: 200px;"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="button" type="submit" >Lưu Kết Quả</button><br>
+                </form>
+            </div>
+          </main>
+
+        <footer>
+            <p>Trường Đại học Công Nghiệp Thực Phẩm TP.HCM</p>
+            <p>Khoa công nghệ thông tin - chuyên ngành Khoa học thiết kế dữ liệu</p>
+        </footer>
+    </div>
+</body>
+
+</html>

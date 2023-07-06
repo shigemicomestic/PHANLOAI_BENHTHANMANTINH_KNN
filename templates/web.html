@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoAn_HocMay</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+        }
+        
+        header {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+    
+        header p {
+            margin: 0;
+            margin-left: 110px;
+            text-align: center;
+            color: blue;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        main {
+            flex: 8;
+            display: flex;
+        }
+    
+        table, tr, td{
+            padding: 5px;
+        }
+
+        .button {
+            width: 150px;
+            height: 50px;
+        }
+        footer {
+            background-color: #f1f1f1;
+            color: blue;
+            text-align: center;
+            flex: 1;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <div>
+                    <br><p>ĐỒ ÁN HỌC MÁY</p><br>
+                    <p>CHUẨN ĐOÁN BỆNH THẬN MÃN TÍNH</p><br>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container" style="margin: 0 auto;">
+                <h2 style="text-align: center;">Nhập Dữ Liệu</h2>
+                <form method="POST" action="/process_data">
+                    <label for="TenBN">Tên Bệnh Nhân:</label>
+                    <input type="text" id="MABN" name="TenBN">
+                    <label for="GioiTinh">Giới Tính:</label>
+                    <select id="GioiTinh" name="GioiTinh">
+                        <option value="Nam">Nam</option>
+                        <option value="Nu">Nu</option>
+                    </select>
+                    <table style="margin: 0 auto;">
+                        <tr>
+                            <td>
+                                <label for="age">age</label>
+                            </td>
+                            <td>
+                                <input type="text" name="age" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="bp">bp</label>
+                            </td>
+                            <td>
+                                <input type="text" name="bp" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="sg">sg</label>
+                            </td>
+                            <td>
+                                <input type="text" name="sg" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="al">al</label>
+                            </td>
+                            <td>
+                                <input type="text" name="al" style="width: 50px;">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="rbc">rbc</label>
+                            </td>
+                            <td>
+                                <input type="text" name="rbc" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="pc">pc</label>
+                            </td>
+                            <td>
+                                <input type="text" name="pc" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="pcc">pcc</label>
+                            </td>
+                            <td>
+                                <input type="text" name="pcc" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="ba">ba</label>
+                            </td>
+                            <td>
+                                <input type="text" name="ba" style="width: 50px;">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="bgr">bgr</label>
+                            </td>
+                            <td>
+                                <input type="text" name="bgr" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="bu">bu</label>
+                            </td>
+                            <td>
+                                <input type="text" name="bu" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="sc">sc</label>
+                            </td>
+                            <td>
+                                <input type="text" name="sc" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="sod">sod</label>
+                            </td>
+                            <td>
+                                <input type="text" name="sod" style="width: 50px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="pot">pot</label>
+                            </td>
+                            <td>
+                                <input type="text" name="pot" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="hemo">hemo</label>
+                            </td>
+                            <td>
+                                <input type="text" name="hemo" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="pcv">pcv</label>
+                            </td>
+                            <td>
+                                <input type="text" name="pcv" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="wc">wc</label>
+                            </td>
+                            <td>
+                                <input type="text" name="wc" style="width: 50px;">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="rc">rc</label>
+                            </td>
+                            <td>
+                                <input type="text" name="rc" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="htn">htn</label>
+                            </td>
+                            <td>
+                                <input type="text" name="htn" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="dm">dm</label>
+                            </td>
+                            <td>
+                                <input type="text" name="dm" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="cad">cad</label>
+                            </td>
+                            <td>
+                                <input type="text" name="cad" style="width: 50px;">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="appet">appet</label>
+                            </td>
+                            <td>
+                                <input type="text" name="appet" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="pe">pe</label>
+                            </td>
+                            <td>
+                                <input type="text" name="pe" style="width: 50px;">
+                            </td>
+                            <td>
+                                <label for="ane">ane</label>
+                            </td>
+                            <td>
+                                <input type="text" name="ane" style="width: 50px;">
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="button" type="submit">Chuẩn Đoán Bệnh</button>
+                </form>
+            </div>
+          </main>
+
+        <footer>
+            <p>Trường Đại học Công Nghiệp Thực Phẩm TP.HCM</p>
+            <p>Khoa công nghệ thông tin - chuyên ngành Khoa học thiết kế dữ liệu</p>
+        </footer>
+    </div>
+</body>
+
+</script>
+</html>
